@@ -15,6 +15,115 @@
           }
         }
       },
+      "Microsoft.AspNetCore.Authorization/9.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Metadata": "9.0.8",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.8",
+          "Microsoft.Extensions.Options": "9.0.8"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.AspNetCore.Authorization.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.AspNetCore.Authorization.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Components/9.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Authorization": "9.0.8",
+          "Microsoft.AspNetCore.Components.Analyzers": "9.0.8"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.AspNetCore.Components.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.AspNetCore.Components.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Components.Analyzers/9.0.8": {
+        "type": "package",
+        "build": {
+          "buildTransitive/netstandard2.0/Microsoft.AspNetCore.Components.Analyzers.targets": {}
+        }
+      },
+      "Microsoft.AspNetCore.Components.Forms/9.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "9.0.8"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.AspNetCore.Components.Forms.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.AspNetCore.Components.Forms.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Components.Web/9.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "9.0.8",
+          "Microsoft.AspNetCore.Components.Forms": "9.0.8",
+          "Microsoft.Extensions.DependencyInjection": "9.0.8",
+          "Microsoft.Extensions.Primitives": "9.0.8",
+          "Microsoft.JSInterop": "9.0.8"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.AspNetCore.Components.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.AspNetCore.Components.Web.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Components.WebAssembly.Server/9.0.8": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/Microsoft.AspNetCore.Components.WebAssembly.Server.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.AspNetCore.Components.WebAssembly.Server.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ],
+        "build": {
+          "build/Microsoft.AspNetCore.Components.WebAssembly.Server.targets": {}
+        }
+      },
+      "Microsoft.AspNetCore.Metadata/9.0.8": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/Microsoft.AspNetCore.Metadata.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.AspNetCore.Metadata.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.AspNetCore.OpenApi/9.0.7": {
         "type": "package",
         "dependencies": {
@@ -663,6 +772,19 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
+      "Microsoft.JSInterop/9.0.8": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/Microsoft.JSInterop.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.JSInterop.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.OpenApi/1.6.17": {
         "type": "package",
         "compile": {
@@ -969,6 +1091,133 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
+      ]
+    },
+    "Microsoft.AspNetCore.Authorization/9.0.8": {
+      "sha512": "1M8ncVJtsRBEfbDc9QCa2zuwMjh/YWLu/WnRXWHG5q+KE5FDvPEsV3cJag3qy6NWL2b0H+pdushFsN9d3geemA==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.authorization/9.0.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net462/Microsoft.AspNetCore.Authorization.dll",
+        "lib/net462/Microsoft.AspNetCore.Authorization.xml",
+        "lib/net9.0/Microsoft.AspNetCore.Authorization.dll",
+        "lib/net9.0/Microsoft.AspNetCore.Authorization.xml",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Authorization.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Authorization.xml",
+        "microsoft.aspnetcore.authorization.9.0.8.nupkg.sha512",
+        "microsoft.aspnetcore.authorization.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Components/9.0.8": {
+      "sha512": "+s+r/l2iBoU1mnG8ft9HS/xzqjd0cGbqnsVC9PgjNa5VGm/pVbPEMUJDea58iOaVETi7VGQCDoHLG83ObmlK2A==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.components/9.0.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.txt",
+        "lib/net9.0/Microsoft.AspNetCore.Components.dll",
+        "lib/net9.0/Microsoft.AspNetCore.Components.xml",
+        "microsoft.aspnetcore.components.9.0.8.nupkg.sha512",
+        "microsoft.aspnetcore.components.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Components.Analyzers/9.0.8": {
+      "sha512": "uRx+7E0/nKIbQ0yG2/TYr6RYqeVanWwAVdwzzffGvTyI/jZBE3YT9aJ9c0DGrhgvkDZPzH1Z4ryp6LdMmBJFAQ==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.components.analyzers/9.0.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.txt",
+        "analyzers/dotnet/cs/Microsoft.AspNetCore.Components.Analyzers.dll",
+        "build/netstandard2.0/Microsoft.AspNetCore.Components.Analyzers.targets",
+        "buildTransitive/netstandard2.0/Microsoft.AspNetCore.Components.Analyzers.targets",
+        "microsoft.aspnetcore.components.analyzers.9.0.8.nupkg.sha512",
+        "microsoft.aspnetcore.components.analyzers.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Components.Forms/9.0.8": {
+      "sha512": "OgbzTUq4/y0jbUspgBFBQ3TJZepx05uFYLgXyB04uwTIM2JtHFcFcQvoO2lWRwXl8I2B5PtMTcTFVFt+/b5onQ==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.components.forms/9.0.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.txt",
+        "lib/net9.0/Microsoft.AspNetCore.Components.Forms.dll",
+        "lib/net9.0/Microsoft.AspNetCore.Components.Forms.xml",
+        "microsoft.aspnetcore.components.forms.9.0.8.nupkg.sha512",
+        "microsoft.aspnetcore.components.forms.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Components.Web/9.0.8": {
+      "sha512": "YKdFoDJ36VNRDoZfoc6bf/RWEg4mR/f6Fa9CToDEiqwZId70Qc9JUamM4rgfDaKLIGY7QEeh3oS3j1cQb5AUUA==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.components.web/9.0.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.txt",
+        "lib/net9.0/Microsoft.AspNetCore.Components.Web.dll",
+        "lib/net9.0/Microsoft.AspNetCore.Components.Web.xml",
+        "microsoft.aspnetcore.components.web.9.0.8.nupkg.sha512",
+        "microsoft.aspnetcore.components.web.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Components.WebAssembly.Server/9.0.8": {
+      "sha512": "HelrX+9Q55A0uGUFsW0t5RbZaOn8pCUGpGk115ByrJQS8TKkKsOzMwhZEcVnZbdMYAhuj0TzHYhzW11LblFi8A==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.components.webassembly.server/9.0.8",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.txt",
+        "build/Microsoft.AspNetCore.Components.WebAssembly.Server.targets",
+        "lib/net9.0/Microsoft.AspNetCore.Components.WebAssembly.Server.dll",
+        "lib/net9.0/Microsoft.AspNetCore.Components.WebAssembly.Server.xml",
+        "microsoft.aspnetcore.components.webassembly.server.9.0.8.nupkg.sha512",
+        "microsoft.aspnetcore.components.webassembly.server.nuspec",
+        "tools/BlazorDebugProxy/BrowserDebugHost.dll",
+        "tools/BlazorDebugProxy/BrowserDebugHost.runtimeconfig.json",
+        "tools/BlazorDebugProxy/BrowserDebugProxy.dll",
+        "tools/BlazorDebugProxy/Microsoft.CodeAnalysis.CSharp.Scripting.dll",
+        "tools/BlazorDebugProxy/Microsoft.CodeAnalysis.CSharp.dll",
+        "tools/BlazorDebugProxy/Microsoft.CodeAnalysis.Scripting.dll",
+        "tools/BlazorDebugProxy/Microsoft.CodeAnalysis.dll",
+        "tools/BlazorDebugProxy/Microsoft.FileFormats.dll",
+        "tools/BlazorDebugProxy/Microsoft.NET.WebAssembly.Webcil.dll",
+        "tools/BlazorDebugProxy/Microsoft.SymbolStore.dll",
+        "tools/BlazorDebugProxy/Newtonsoft.Json.dll"
+      ]
+    },
+    "Microsoft.AspNetCore.Metadata/9.0.8": {
+      "sha512": "sju8zleT9mRQWeEe4hu4Vh4uep6WppxULZEkirEgU/pRl6uIQQsd526EBa8u52j+LuA3J8gS8twRmTpsr3xGtA==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.metadata/9.0.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net462/Microsoft.AspNetCore.Metadata.dll",
+        "lib/net462/Microsoft.AspNetCore.Metadata.xml",
+        "lib/net9.0/Microsoft.AspNetCore.Metadata.dll",
+        "lib/net9.0/Microsoft.AspNetCore.Metadata.xml",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Metadata.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Metadata.xml",
+        "microsoft.aspnetcore.metadata.9.0.8.nupkg.sha512",
+        "microsoft.aspnetcore.metadata.nuspec"
       ]
     },
     "Microsoft.AspNetCore.OpenApi/9.0.7": {
@@ -2416,6 +2665,21 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "Microsoft.JSInterop/9.0.8": {
+      "sha512": "arGqasYOND4vG0s1RywqHAKq1NIyFrco/srpM9QDlVGnFrYdtkWZUEuiVcD5GZswfmYOGVD5CLIHVVb8S86ylQ==",
+      "type": "package",
+      "path": "microsoft.jsinterop/9.0.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net9.0/Microsoft.JSInterop.dll",
+        "lib/net9.0/Microsoft.JSInterop.xml",
+        "microsoft.jsinterop.9.0.8.nupkg.sha512",
+        "microsoft.jsinterop.nuspec"
+      ]
+    },
     "Microsoft.OpenApi/1.6.17": {
       "sha512": "Le+kehlmrlQfuDFUt1zZ2dVwrhFQtKREdKBo+rexOwaCoYP0/qpgT9tLxCsZjsgR5Itk1UKPcbgO+FyaNid/bA==",
       "type": "package",
@@ -2883,6 +3147,9 @@
   },
   "projectFileDependencyGroups": {
     "net9.0": [
+      "Microsoft.AspNetCore.Components >= 9.0.8",
+      "Microsoft.AspNetCore.Components.Web >= 9.0.8",
+      "Microsoft.AspNetCore.Components.WebAssembly.Server >= 9.0.8",
       "Microsoft.AspNetCore.OpenApi >= 9.0.7",
       "Microsoft.EntityFrameworkCore >= 9.0.8",
       "Microsoft.EntityFrameworkCore.Design >= 9.0.8",
@@ -2934,6 +3201,18 @@
       "net9.0": {
         "targetAlias": "net9.0",
         "dependencies": {
+          "Microsoft.AspNetCore.Components": {
+            "target": "Package",
+            "version": "[9.0.8, )"
+          },
+          "Microsoft.AspNetCore.Components.Web": {
+            "target": "Package",
+            "version": "[9.0.8, )"
+          },
+          "Microsoft.AspNetCore.Components.WebAssembly.Server": {
+            "target": "Package",
+            "version": "[9.0.8, )"
+          },
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",
             "version": "[9.0.7, )"

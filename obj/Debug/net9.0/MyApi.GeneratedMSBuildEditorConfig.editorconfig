@@ -27,3 +27,27 @@ build_property.MSBuildProjectDirectory = /Users/anele/Desktop/DEV/dotnet/MyApi
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
+
+[/Users/anele/Desktop/DEV/dotnet/MyApi/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/anele/Desktop/DEV/dotnet/MyApi/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/anele/Desktop/DEV/dotnet/MyApi/Pages/Posts.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUG9zdHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/anele/Desktop/DEV/dotnet/MyApi/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL01haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/anele/Desktop/DEV/dotnet/MyApi/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/anele/Desktop/DEV/dotnet/MyApi/Pages/_Host.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX0hvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 

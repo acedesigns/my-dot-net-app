@@ -1,0 +1,58 @@
+@page "/posts"
+@inject HttpClient Http
+
+<h1>Posts</h1>
+
+@if (posts == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    @foreach (var post in posts)
+    {
+        <div style="border:1px solid #ccc; padding:10px; margin:10px;">
+            <p>@post.Content</p>
+            <p>Likes: @post.Likes</p>
+            <button @onclick="() => LikePost(post.Id)">Like</button>
+        </div>
+    }
+}
+
+<h2>Add Post</h2>
+<textarea @bind="newPostContent"></textarea><br />
+<button @onclick="AddPost">Add Post</button>
+
+@code {
+    private List<Post>? posts;
+    private string newPostContent = "";
+
+    protected override async Task OnInitializedAsync()
+    {
+        posts = await Http.GetFromJsonAsync<List<Post>>("/api/post");
+    }
+
+    private async Task AddPost()
+    {
+        var response = await Http.PostAsJsonAsync("/api/post", new Post { Content = newPostContent });
+        if (response.IsSuccessStatusCode)
+        {
+            posts = await Http.GetFromJsonAsync<List<Post>>("/api/post");
+            newPostContent = "";
+        }
+    }
+
+    private async Task LikePost(int id)
+    {
+        await Http.PostAsync($"/api/post/{id}/like", null);
+        posts = await Http.GetFromJsonAsync<List<Post>>("/api/post");
+    }
+
+    public class Post
+    {
+        public int Id { get; set; }
+        public string Content { get; set; } = string.Empty;
+        public int Likes { get; set; }
+        public DateTime CreatedAt { get; set; }
+    }
+}
