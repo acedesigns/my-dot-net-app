@@ -5,8 +5,24 @@
       "PackagePath": "staticwebassets/css/bootstrap.min.css"
     },
     {
-      "Id": "/Users/anele/Desktop/DEV/dotnet/MyApi/wwwroot/site.css",
-      "PackagePath": "staticwebassets/site.css"
+      "Id": "/Users/anele/Desktop/DEV/dotnet/MyApi/wwwroot/css/site.css",
+      "PackagePath": "staticwebassets/css/site.css"
+    },
+    {
+      "Id": "/Users/anele/Desktop/DEV/dotnet/MyApi/wwwroot/js/bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets/js/bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "/Users/anele/Desktop/DEV/dotnet/MyApi/wwwroot/lib/jquery.js",
+      "PackagePath": "staticwebassets/lib/jquery.js"
+    },
+    {
+      "Id": "/Users/anele/Desktop/DEV/dotnet/MyApi/wwwroot/lib/jquery.validate.js",
+      "PackagePath": "staticwebassets/lib/jquery.validate.js"
+    },
+    {
+      "Id": "/Users/anele/Desktop/DEV/dotnet/MyApi/wwwroot/lib/jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets/lib/jquery.validate.unobtrusive.js"
     },
     {
       "Id": "obj/Debug/net9.0/staticwebassets/msbuild.MyApi.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

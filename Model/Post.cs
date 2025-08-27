@@ -1,36 +1,30 @@
+/* =======================================================
+ *
+ * Created by anele on 27/08/2025.
+ *
+ * @anele_ace
+ *
+ * =======================================================
+ */
+
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MyApi.Models
 {
-    /*public class Post
-    {
-        public int Id { get; set; }
-
-        [Required, StringLength(100)]
-        public string Title { get; set; } = string.Empty;
-
-        [Required, StringLength(500)]
-        public string Content { get; set; } = string.Empty;
-
-        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
-
-        public int Likes { get; set; } = 0;
-    }*/
-
+    
     public class Post
     {
         public int Id { get; set; }
 
-        [Required, StringLength(100)]
-        public string Title { get; set; } = string.Empty;
+        [Required]
+        public required string Title { get; set; }
 
         [Required]
-        [Column(TypeName = "TEXT")]
-        public string Content { get; set; } = string.Empty;
-
-        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        public required string Content { get; set; }
 
         public int? Likes { get; set; } = 0;
+
+        public DateTime CreatedAt { get; set; }
     }
 }

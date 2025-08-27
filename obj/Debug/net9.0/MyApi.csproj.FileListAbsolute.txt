@@ -157,5 +157,9 @@
 /Users/anele/Desktop/DEV/dotnet/MyApi/bin/Debug/net9.0/Microsoft.AspNetCore.Metadata.dll
 /Users/anele/Desktop/DEV/dotnet/MyApi/bin/Debug/net9.0/Microsoft.JSInterop.dll
 /Users/anele/Desktop/DEV/dotnet/MyApi/bin/Debug/net9.0/MyApi.staticwebassets.runtime.json
-/Users/anele/Desktop/DEV/dotnet/MyApi/obj/Debug/net9.0/compressed/dinlt7zgxu-ese3jceymo.gz
 /Users/anele/Desktop/DEV/dotnet/MyApi/obj/Debug/net9.0/compressed/s4lmiujjlt-vuwcuwcvzl.gz
+/Users/anele/Desktop/DEV/dotnet/MyApi/obj/Debug/net9.0/compressed/zpzzhjq3ov-ese3jceymo.gz
+/Users/anele/Desktop/DEV/dotnet/MyApi/obj/Debug/net9.0/compressed/1fopn2jbud-2t3627yj08.gz
+/Users/anele/Desktop/DEV/dotnet/MyApi/obj/Debug/net9.0/compressed/msxcrddtz9-ex5vf7708v.gz
+/Users/anele/Desktop/DEV/dotnet/MyApi/obj/Debug/net9.0/compressed/8ijknwdh1t-b7iojwaux1.gz
+/Users/anele/Desktop/DEV/dotnet/MyApi/obj/Debug/net9.0/compressed/zji4qhkbmr-1j8snvso5d.gz

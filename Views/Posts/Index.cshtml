@@ -1,0 +1,75 @@
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Posts";
+}
+
+@model IEnumerable<MyApi.Models.Post>
+
+<h1>All Posts</h1>
+
+@if (!Model.Any(p => !string.IsNullOrWhiteSpace(p.Title) || !string.IsNullOrWhiteSpace(p.Content)))
+{
+    <div class="row justify-content-md-center">
+        <div class="col-md-auto">
+            <div class="card" style="width: 18rem;">
+                <svg aria-label="Placeholder: Image cap" class="bd-placeholder-img card-img-top" height="180" preserveAspectRatio="xMidYMid slice" role="img" width="100%" xmlns="http://www.w3.org/2000/svg">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#868e96"></rect>
+                    <text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text>
+                </svg>
+                <div class="card-body">
+                    <h5 class="card-title">No posts available</h5>
+                </div>
+                </div>
+        </div>
+    </div>
+}
+
+<div class="row">
+@foreach (var post in Model)
+{
+    <div class="col-md-6 mb-3">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">@post.Title</h5>
+                <p class="card-text">@post.Content</p>
+                <p class="card-text"><small class="text-muted">Likes: @(post.Likes ?? 0)</small></p>
+                <form method="post" asp-action="Like" asp-route-id="@post.Id">
+                    <button type="submit" class="btn btn-sm btn-outline-primary">Like</button>
+                </form>
+            </div>
+        </div>
+    </div>
+}
+</div>
+
+<div class="row justify-content-md-center">
+    <div class="col-md-auto">
+        <div class="mt-3">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+
+                    <!-- Previous Button -->
+                    <li class="page-item @(ViewBag.CurrentPage == 1 ? "disabled" : "")">
+                        <a class="page-link" asp-action="Index" asp-route-page="@(ViewBag.CurrentPage - 1)">Previous</a>
+                    </li>
+
+                    <!-- Page Numbers -->
+                    @for (int i = 1; i <= ViewBag.TotalPages; i++)
+                    {
+                        <li class="page-item @(i == ViewBag.CurrentPage ? "active" : "")">
+                            <a class="page-link" asp-action="Index" asp-route-page="@i">@i</a>
+                        </li>
+                    }
+
+                    <!-- Next Button -->
+                    <li class="page-item @(ViewBag.CurrentPage == ViewBag.TotalPages ? "disabled" : "")">
+                        <a class="page-link" asp-action="Index" asp-route-page="@(ViewBag.CurrentPage + 1)">Next</a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+

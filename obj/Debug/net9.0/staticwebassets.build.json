@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "oGQDD7w6EMk9K3UMY8MGbGS5gHU2QK5Bl78wpq+o4f0=",
+  "Hash": "2Yv2v8MFy+T1pUcXeZrrP6ziPLC5J/kV9JTeQ8qEYgQ=",
   "Source": "MyApi",
   "BasePath": "_content/MyApi",
   "Mode": "Default",
@@ -17,25 +17,67 @@
   ],
   "Assets": [
     {
-      "Identity": "/Users/anele/Desktop/DEV/dotnet/MyApi/obj/Debug/net9.0/compressed/dinlt7zgxu-ese3jceymo.gz",
+      "Identity": "/Users/anele/Desktop/DEV/dotnet/MyApi/obj/Debug/net9.0/compressed/1fopn2jbud-2t3627yj08.gz",
       "SourceId": "MyApi",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/anele/Desktop/DEV/dotnet/MyApi/obj/Debug/net9.0/compressed/",
       "BasePath": "_content/MyApi",
-      "RelativePath": "site#[.{fingerprint=ese3jceymo}]?.css.gz",
+      "RelativePath": "js/bootstrap.bundle.min#[.{fingerprint=2t3627yj08}]?.js.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
       "AssetMergeBehavior": "",
       "AssetMergeSource": "",
-      "RelatedAsset": "/Users/anele/Desktop/DEV/dotnet/MyApi/wwwroot/site.css",
+      "RelatedAsset": "/Users/anele/Desktop/DEV/dotnet/MyApi/wwwroot/js/bootstrap.bundle.min.js",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "6vm298cjdn",
-      "Integrity": "QinaP8/QcYRlIEJAutOXdcc+X+8dLT0UXoqMs9cTSsk=",
+      "Fingerprint": "j3xt470r1q",
+      "Integrity": "zwxgJVLPRHp2+KyDtdzDZv5juzz3pxW1JgYSZe0s/vw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/Users/anele/Desktop/DEV/dotnet/MyApi/wwwroot/site.css"
+      "OriginalItemSpec": "/Users/anele/Desktop/DEV/dotnet/MyApi/wwwroot/js/bootstrap.bundle.min.js"
+    },
+    {
+      "Identity": "/Users/anele/Desktop/DEV/dotnet/MyApi/obj/Debug/net9.0/compressed/8ijknwdh1t-b7iojwaux1.gz",
+      "SourceId": "MyApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/anele/Desktop/DEV/dotnet/MyApi/obj/Debug/net9.0/compressed/",
+      "BasePath": "_content/MyApi",
+      "RelativePath": "lib/jquery.validate#[.{fingerprint=b7iojwaux1}]?.js.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "/Users/anele/Desktop/DEV/dotnet/MyApi/wwwroot/lib/jquery.validate.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "2v7zgp5eyn",
+      "Integrity": "jvaNn/pxVHU0oUjXq0fqLQ8NpGJyLHohMC+D+jhLm/I=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/Users/anele/Desktop/DEV/dotnet/MyApi/wwwroot/lib/jquery.validate.js"
+    },
+    {
+      "Identity": "/Users/anele/Desktop/DEV/dotnet/MyApi/obj/Debug/net9.0/compressed/msxcrddtz9-ex5vf7708v.gz",
+      "SourceId": "MyApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/anele/Desktop/DEV/dotnet/MyApi/obj/Debug/net9.0/compressed/",
+      "BasePath": "_content/MyApi",
+      "RelativePath": "lib/jquery#[.{fingerprint=ex5vf7708v}]?.js.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "/Users/anele/Desktop/DEV/dotnet/MyApi/wwwroot/lib/jquery.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "xtpogqwcm4",
+      "Integrity": "O6/8RKc5Gk+rS0Q3LtGEHMv6TCQt1dIceC9g9leQ/AI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/Users/anele/Desktop/DEV/dotnet/MyApi/wwwroot/lib/jquery.js"
     },
     {
       "Identity": "/Users/anele/Desktop/DEV/dotnet/MyApi/obj/Debug/net9.0/compressed/s4lmiujjlt-vuwcuwcvzl.gz",
@@ -59,6 +101,48 @@
       "OriginalItemSpec": "/Users/anele/Desktop/DEV/dotnet/MyApi/wwwroot/css/bootstrap.min.css"
     },
     {
+      "Identity": "/Users/anele/Desktop/DEV/dotnet/MyApi/obj/Debug/net9.0/compressed/zji4qhkbmr-1j8snvso5d.gz",
+      "SourceId": "MyApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/anele/Desktop/DEV/dotnet/MyApi/obj/Debug/net9.0/compressed/",
+      "BasePath": "_content/MyApi",
+      "RelativePath": "lib/jquery.validate.unobtrusive#[.{fingerprint=1j8snvso5d}]?.js.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "/Users/anele/Desktop/DEV/dotnet/MyApi/wwwroot/lib/jquery.validate.unobtrusive.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "bb1560yid1",
+      "Integrity": "GQRRW6WWyPaxIQW4nTWvbVlKFPusblIf9Ij6CVdxCpI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/Users/anele/Desktop/DEV/dotnet/MyApi/wwwroot/lib/jquery.validate.unobtrusive.js"
+    },
+    {
+      "Identity": "/Users/anele/Desktop/DEV/dotnet/MyApi/obj/Debug/net9.0/compressed/zpzzhjq3ov-ese3jceymo.gz",
+      "SourceId": "MyApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/anele/Desktop/DEV/dotnet/MyApi/obj/Debug/net9.0/compressed/",
+      "BasePath": "_content/MyApi",
+      "RelativePath": "css/site#[.{fingerprint=ese3jceymo}]?.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "/Users/anele/Desktop/DEV/dotnet/MyApi/wwwroot/css/site.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "6vm298cjdn",
+      "Integrity": "QinaP8/QcYRlIEJAutOXdcc+X+8dLT0UXoqMs9cTSsk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/Users/anele/Desktop/DEV/dotnet/MyApi/wwwroot/css/site.css"
+    },
+    {
       "Identity": "/Users/anele/Desktop/DEV/dotnet/MyApi/wwwroot/css/bootstrap.min.css",
       "SourceId": "MyApi",
       "SourceType": "Discovered",
@@ -80,12 +164,12 @@
       "OriginalItemSpec": "wwwroot/css/bootstrap.min.css"
     },
     {
-      "Identity": "/Users/anele/Desktop/DEV/dotnet/MyApi/wwwroot/site.css",
+      "Identity": "/Users/anele/Desktop/DEV/dotnet/MyApi/wwwroot/css/site.css",
       "SourceId": "MyApi",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/anele/Desktop/DEV/dotnet/MyApi/wwwroot/",
       "BasePath": "_content/MyApi",
-      "RelativePath": "site#[.{fingerprint}]?.css",
+      "RelativePath": "css/site#[.{fingerprint}]?.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -98,7 +182,91 @@
       "Integrity": "nnDGNhd+6tQlP1qfIQvQLQMcl1iilaMFFad9io1qsGo=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/site.css"
+      "OriginalItemSpec": "wwwroot/css/site.css"
+    },
+    {
+      "Identity": "/Users/anele/Desktop/DEV/dotnet/MyApi/wwwroot/js/bootstrap.bundle.min.js",
+      "SourceId": "MyApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/anele/Desktop/DEV/dotnet/MyApi/wwwroot/",
+      "BasePath": "_content/MyApi",
+      "RelativePath": "js/bootstrap.bundle.min#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "2t3627yj08",
+      "Integrity": "xvZwIWrt0sYeyDEC9+QMHEQRTuzX83su3DMnVzkMOGo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/js/bootstrap.bundle.min.js"
+    },
+    {
+      "Identity": "/Users/anele/Desktop/DEV/dotnet/MyApi/wwwroot/lib/jquery.js",
+      "SourceId": "MyApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/anele/Desktop/DEV/dotnet/MyApi/wwwroot/",
+      "BasePath": "_content/MyApi",
+      "RelativePath": "lib/jquery#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ex5vf7708v",
+      "Integrity": "PnUB0Vw2MOeRyLIDkuud7jGp9lzj793nbO9ccQFBqyQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/lib/jquery.js"
+    },
+    {
+      "Identity": "/Users/anele/Desktop/DEV/dotnet/MyApi/wwwroot/lib/jquery.validate.js",
+      "SourceId": "MyApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/anele/Desktop/DEV/dotnet/MyApi/wwwroot/",
+      "BasePath": "_content/MyApi",
+      "RelativePath": "lib/jquery.validate#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "b7iojwaux1",
+      "Integrity": "JwUksNJ6/R07ZiLRoXbGeNrtlFZMFDKX4hemPiHOmCA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/lib/jquery.validate.js"
+    },
+    {
+      "Identity": "/Users/anele/Desktop/DEV/dotnet/MyApi/wwwroot/lib/jquery.validate.unobtrusive.js",
+      "SourceId": "MyApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/anele/Desktop/DEV/dotnet/MyApi/wwwroot/",
+      "BasePath": "_content/MyApi",
+      "RelativePath": "lib/jquery.validate.unobtrusive#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "1j8snvso5d",
+      "Integrity": "LS2w6Brl1+5DmFqwNqxSUL9gufubaY5lUjR7hZdSWg0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/lib/jquery.validate.unobtrusive.js"
     }
   ],
   "Endpoints": [
@@ -401,8 +569,8 @@
       ]
     },
     {
-      "Route": "site.css",
-      "AssetFile": "/Users/anele/Desktop/DEV/dotnet/MyApi/obj/Debug/net9.0/compressed/dinlt7zgxu-ese3jceymo.gz",
+      "Route": "css/site.css",
+      "AssetFile": "/Users/anele/Desktop/DEV/dotnet/MyApi/obj/Debug/net9.0/compressed/zpzzhjq3ov-ese3jceymo.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -456,8 +624,8 @@
       ]
     },
     {
-      "Route": "site.css",
-      "AssetFile": "/Users/anele/Desktop/DEV/dotnet/MyApi/wwwroot/site.css",
+      "Route": "css/site.css",
+      "AssetFile": "/Users/anele/Desktop/DEV/dotnet/MyApi/wwwroot/css/site.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -493,8 +661,8 @@
       ]
     },
     {
-      "Route": "site.css.gz",
-      "AssetFile": "/Users/anele/Desktop/DEV/dotnet/MyApi/obj/Debug/net9.0/compressed/dinlt7zgxu-ese3jceymo.gz",
+      "Route": "css/site.css.gz",
+      "AssetFile": "/Users/anele/Desktop/DEV/dotnet/MyApi/obj/Debug/net9.0/compressed/zpzzhjq3ov-ese3jceymo.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -538,8 +706,8 @@
       ]
     },
     {
-      "Route": "site.ese3jceymo.css",
-      "AssetFile": "/Users/anele/Desktop/DEV/dotnet/MyApi/obj/Debug/net9.0/compressed/dinlt7zgxu-ese3jceymo.gz",
+      "Route": "css/site.ese3jceymo.css",
+      "AssetFile": "/Users/anele/Desktop/DEV/dotnet/MyApi/obj/Debug/net9.0/compressed/zpzzhjq3ov-ese3jceymo.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -592,7 +760,7 @@
         },
         {
           "Name": "label",
-          "Value": "site.css"
+          "Value": "css/site.css"
         },
         {
           "Name": "integrity",
@@ -601,8 +769,8 @@
       ]
     },
     {
-      "Route": "site.ese3jceymo.css",
-      "AssetFile": "/Users/anele/Desktop/DEV/dotnet/MyApi/wwwroot/site.css",
+      "Route": "css/site.ese3jceymo.css",
+      "AssetFile": "/Users/anele/Desktop/DEV/dotnet/MyApi/wwwroot/css/site.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -637,7 +805,7 @@
         },
         {
           "Name": "label",
-          "Value": "site.css"
+          "Value": "css/site.css"
         },
         {
           "Name": "integrity",
@@ -646,8 +814,8 @@
       ]
     },
     {
-      "Route": "site.ese3jceymo.css.gz",
-      "AssetFile": "/Users/anele/Desktop/DEV/dotnet/MyApi/obj/Debug/net9.0/compressed/dinlt7zgxu-ese3jceymo.gz",
+      "Route": "css/site.ese3jceymo.css.gz",
+      "AssetFile": "/Users/anele/Desktop/DEV/dotnet/MyApi/obj/Debug/net9.0/compressed/zpzzhjq3ov-ese3jceymo.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -690,11 +858,1203 @@
         },
         {
           "Name": "label",
-          "Value": "site.css.gz"
+          "Value": "css/site.css.gz"
         },
         {
           "Name": "integrity",
           "Value": "sha256-QinaP8/QcYRlIEJAutOXdcc+X+8dLT0UXoqMs9cTSsk="
+        }
+      ]
+    },
+    {
+      "Route": "js/bootstrap.bundle.min.2t3627yj08.js",
+      "AssetFile": "/Users/anele/Desktop/DEV/dotnet/MyApi/obj/Debug/net9.0/compressed/1fopn2jbud-2t3627yj08.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000042053913"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "23778"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zwxgJVLPRHp2+KyDtdzDZv5juzz3pxW1JgYSZe0s/vw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 27 Aug 2025 17:53:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"xvZwIWrt0sYeyDEC9+QMHEQRTuzX83su3DMnVzkMOGo=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2t3627yj08"
+        },
+        {
+          "Name": "label",
+          "Value": "js/bootstrap.bundle.min.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-xvZwIWrt0sYeyDEC9+QMHEQRTuzX83su3DMnVzkMOGo="
+        }
+      ]
+    },
+    {
+      "Route": "js/bootstrap.bundle.min.2t3627yj08.js",
+      "AssetFile": "/Users/anele/Desktop/DEV/dotnet/MyApi/wwwroot/js/bootstrap.bundle.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "80448"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xvZwIWrt0sYeyDEC9+QMHEQRTuzX83su3DMnVzkMOGo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 27 Aug 2025 17:53:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2t3627yj08"
+        },
+        {
+          "Name": "label",
+          "Value": "js/bootstrap.bundle.min.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-xvZwIWrt0sYeyDEC9+QMHEQRTuzX83su3DMnVzkMOGo="
+        }
+      ]
+    },
+    {
+      "Route": "js/bootstrap.bundle.min.2t3627yj08.js.gz",
+      "AssetFile": "/Users/anele/Desktop/DEV/dotnet/MyApi/obj/Debug/net9.0/compressed/1fopn2jbud-2t3627yj08.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "23778"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zwxgJVLPRHp2+KyDtdzDZv5juzz3pxW1JgYSZe0s/vw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 27 Aug 2025 17:53:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2t3627yj08"
+        },
+        {
+          "Name": "label",
+          "Value": "js/bootstrap.bundle.min.js.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-zwxgJVLPRHp2+KyDtdzDZv5juzz3pxW1JgYSZe0s/vw="
+        }
+      ]
+    },
+    {
+      "Route": "js/bootstrap.bundle.min.js",
+      "AssetFile": "/Users/anele/Desktop/DEV/dotnet/MyApi/obj/Debug/net9.0/compressed/1fopn2jbud-2t3627yj08.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000042053913"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "23778"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zwxgJVLPRHp2+KyDtdzDZv5juzz3pxW1JgYSZe0s/vw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 27 Aug 2025 17:53:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"xvZwIWrt0sYeyDEC9+QMHEQRTuzX83su3DMnVzkMOGo=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-xvZwIWrt0sYeyDEC9+QMHEQRTuzX83su3DMnVzkMOGo="
+        }
+      ]
+    },
+    {
+      "Route": "js/bootstrap.bundle.min.js",
+      "AssetFile": "/Users/anele/Desktop/DEV/dotnet/MyApi/wwwroot/js/bootstrap.bundle.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "80448"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xvZwIWrt0sYeyDEC9+QMHEQRTuzX83su3DMnVzkMOGo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 27 Aug 2025 17:53:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-xvZwIWrt0sYeyDEC9+QMHEQRTuzX83su3DMnVzkMOGo="
+        }
+      ]
+    },
+    {
+      "Route": "js/bootstrap.bundle.min.js.gz",
+      "AssetFile": "/Users/anele/Desktop/DEV/dotnet/MyApi/obj/Debug/net9.0/compressed/1fopn2jbud-2t3627yj08.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "23778"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zwxgJVLPRHp2+KyDtdzDZv5juzz3pxW1JgYSZe0s/vw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 27 Aug 2025 17:53:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-zwxgJVLPRHp2+KyDtdzDZv5juzz3pxW1JgYSZe0s/vw="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery.ex5vf7708v.js",
+      "AssetFile": "/Users/anele/Desktop/DEV/dotnet/MyApi/obj/Debug/net9.0/compressed/msxcrddtz9-ex5vf7708v.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000032883920"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "30409"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"O6/8RKc5Gk+rS0Q3LtGEHMv6TCQt1dIceC9g9leQ/AI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 27 Aug 2025 18:04:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"PnUB0Vw2MOeRyLIDkuud7jGp9lzj793nbO9ccQFBqyQ=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ex5vf7708v"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/jquery.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-PnUB0Vw2MOeRyLIDkuud7jGp9lzj793nbO9ccQFBqyQ="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery.ex5vf7708v.js",
+      "AssetFile": "/Users/anele/Desktop/DEV/dotnet/MyApi/wwwroot/lib/jquery.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "87532"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PnUB0Vw2MOeRyLIDkuud7jGp9lzj793nbO9ccQFBqyQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 27 Aug 2025 18:04:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ex5vf7708v"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/jquery.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-PnUB0Vw2MOeRyLIDkuud7jGp9lzj793nbO9ccQFBqyQ="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery.ex5vf7708v.js.gz",
+      "AssetFile": "/Users/anele/Desktop/DEV/dotnet/MyApi/obj/Debug/net9.0/compressed/msxcrddtz9-ex5vf7708v.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "30409"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"O6/8RKc5Gk+rS0Q3LtGEHMv6TCQt1dIceC9g9leQ/AI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 27 Aug 2025 18:04:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ex5vf7708v"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/jquery.js.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-O6/8RKc5Gk+rS0Q3LtGEHMv6TCQt1dIceC9g9leQ/AI="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery.js",
+      "AssetFile": "/Users/anele/Desktop/DEV/dotnet/MyApi/obj/Debug/net9.0/compressed/msxcrddtz9-ex5vf7708v.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000032883920"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "30409"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"O6/8RKc5Gk+rS0Q3LtGEHMv6TCQt1dIceC9g9leQ/AI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 27 Aug 2025 18:04:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"PnUB0Vw2MOeRyLIDkuud7jGp9lzj793nbO9ccQFBqyQ=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-PnUB0Vw2MOeRyLIDkuud7jGp9lzj793nbO9ccQFBqyQ="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery.js",
+      "AssetFile": "/Users/anele/Desktop/DEV/dotnet/MyApi/wwwroot/lib/jquery.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "87532"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PnUB0Vw2MOeRyLIDkuud7jGp9lzj793nbO9ccQFBqyQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 27 Aug 2025 18:04:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-PnUB0Vw2MOeRyLIDkuud7jGp9lzj793nbO9ccQFBqyQ="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery.js.gz",
+      "AssetFile": "/Users/anele/Desktop/DEV/dotnet/MyApi/obj/Debug/net9.0/compressed/msxcrddtz9-ex5vf7708v.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "30409"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"O6/8RKc5Gk+rS0Q3LtGEHMv6TCQt1dIceC9g9leQ/AI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 27 Aug 2025 18:04:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-O6/8RKc5Gk+rS0Q3LtGEHMv6TCQt1dIceC9g9leQ/AI="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery.validate.b7iojwaux1.js",
+      "AssetFile": "/Users/anele/Desktop/DEV/dotnet/MyApi/obj/Debug/net9.0/compressed/8ijknwdh1t-b7iojwaux1.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000126294519"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7917"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jvaNn/pxVHU0oUjXq0fqLQ8NpGJyLHohMC+D+jhLm/I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 27 Aug 2025 18:05:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"JwUksNJ6/R07ZiLRoXbGeNrtlFZMFDKX4hemPiHOmCA=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "b7iojwaux1"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/jquery.validate.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-JwUksNJ6/R07ZiLRoXbGeNrtlFZMFDKX4hemPiHOmCA="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery.validate.b7iojwaux1.js",
+      "AssetFile": "/Users/anele/Desktop/DEV/dotnet/MyApi/wwwroot/lib/jquery.validate.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "24601"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JwUksNJ6/R07ZiLRoXbGeNrtlFZMFDKX4hemPiHOmCA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 27 Aug 2025 18:05:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "b7iojwaux1"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/jquery.validate.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-JwUksNJ6/R07ZiLRoXbGeNrtlFZMFDKX4hemPiHOmCA="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery.validate.b7iojwaux1.js.gz",
+      "AssetFile": "/Users/anele/Desktop/DEV/dotnet/MyApi/obj/Debug/net9.0/compressed/8ijknwdh1t-b7iojwaux1.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7917"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jvaNn/pxVHU0oUjXq0fqLQ8NpGJyLHohMC+D+jhLm/I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 27 Aug 2025 18:05:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "b7iojwaux1"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/jquery.validate.js.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-jvaNn/pxVHU0oUjXq0fqLQ8NpGJyLHohMC+D+jhLm/I="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery.validate.js",
+      "AssetFile": "/Users/anele/Desktop/DEV/dotnet/MyApi/obj/Debug/net9.0/compressed/8ijknwdh1t-b7iojwaux1.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000126294519"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7917"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jvaNn/pxVHU0oUjXq0fqLQ8NpGJyLHohMC+D+jhLm/I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 27 Aug 2025 18:05:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"JwUksNJ6/R07ZiLRoXbGeNrtlFZMFDKX4hemPiHOmCA=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-JwUksNJ6/R07ZiLRoXbGeNrtlFZMFDKX4hemPiHOmCA="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery.validate.js",
+      "AssetFile": "/Users/anele/Desktop/DEV/dotnet/MyApi/wwwroot/lib/jquery.validate.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "24601"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JwUksNJ6/R07ZiLRoXbGeNrtlFZMFDKX4hemPiHOmCA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 27 Aug 2025 18:05:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-JwUksNJ6/R07ZiLRoXbGeNrtlFZMFDKX4hemPiHOmCA="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery.validate.js.gz",
+      "AssetFile": "/Users/anele/Desktop/DEV/dotnet/MyApi/obj/Debug/net9.0/compressed/8ijknwdh1t-b7iojwaux1.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7917"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jvaNn/pxVHU0oUjXq0fqLQ8NpGJyLHohMC+D+jhLm/I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 27 Aug 2025 18:05:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-jvaNn/pxVHU0oUjXq0fqLQ8NpGJyLHohMC+D+jhLm/I="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery.validate.unobtrusive.1j8snvso5d.js",
+      "AssetFile": "/Users/anele/Desktop/DEV/dotnet/MyApi/obj/Debug/net9.0/compressed/zji4qhkbmr-1j8snvso5d.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000214316331"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4665"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"GQRRW6WWyPaxIQW4nTWvbVlKFPusblIf9Ij6CVdxCpI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 27 Aug 2025 19:26:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"LS2w6Brl1+5DmFqwNqxSUL9gufubaY5lUjR7hZdSWg0=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1j8snvso5d"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/jquery.validate.unobtrusive.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-LS2w6Brl1+5DmFqwNqxSUL9gufubaY5lUjR7hZdSWg0="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery.validate.unobtrusive.1j8snvso5d.js",
+      "AssetFile": "/Users/anele/Desktop/DEV/dotnet/MyApi/wwwroot/lib/jquery.validate.unobtrusive.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19397"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LS2w6Brl1+5DmFqwNqxSUL9gufubaY5lUjR7hZdSWg0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 27 Aug 2025 19:26:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1j8snvso5d"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/jquery.validate.unobtrusive.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-LS2w6Brl1+5DmFqwNqxSUL9gufubaY5lUjR7hZdSWg0="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery.validate.unobtrusive.1j8snvso5d.js.gz",
+      "AssetFile": "/Users/anele/Desktop/DEV/dotnet/MyApi/obj/Debug/net9.0/compressed/zji4qhkbmr-1j8snvso5d.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4665"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"GQRRW6WWyPaxIQW4nTWvbVlKFPusblIf9Ij6CVdxCpI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 27 Aug 2025 19:26:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1j8snvso5d"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/jquery.validate.unobtrusive.js.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-GQRRW6WWyPaxIQW4nTWvbVlKFPusblIf9Ij6CVdxCpI="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery.validate.unobtrusive.js",
+      "AssetFile": "/Users/anele/Desktop/DEV/dotnet/MyApi/obj/Debug/net9.0/compressed/zji4qhkbmr-1j8snvso5d.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000214316331"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4665"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"GQRRW6WWyPaxIQW4nTWvbVlKFPusblIf9Ij6CVdxCpI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 27 Aug 2025 19:26:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"LS2w6Brl1+5DmFqwNqxSUL9gufubaY5lUjR7hZdSWg0=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-LS2w6Brl1+5DmFqwNqxSUL9gufubaY5lUjR7hZdSWg0="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery.validate.unobtrusive.js",
+      "AssetFile": "/Users/anele/Desktop/DEV/dotnet/MyApi/wwwroot/lib/jquery.validate.unobtrusive.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19397"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LS2w6Brl1+5DmFqwNqxSUL9gufubaY5lUjR7hZdSWg0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 27 Aug 2025 19:26:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-LS2w6Brl1+5DmFqwNqxSUL9gufubaY5lUjR7hZdSWg0="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery.validate.unobtrusive.js.gz",
+      "AssetFile": "/Users/anele/Desktop/DEV/dotnet/MyApi/obj/Debug/net9.0/compressed/zji4qhkbmr-1j8snvso5d.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4665"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"GQRRW6WWyPaxIQW4nTWvbVlKFPusblIf9Ij6CVdxCpI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 27 Aug 2025 19:26:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-GQRRW6WWyPaxIQW4nTWvbVlKFPusblIf9Ij6CVdxCpI="
         }
       ]
     }

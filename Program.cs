@@ -1,10 +1,20 @@
-using Microsoft.EntityFrameworkCore;
+/* =======================================================
+ *
+ * Created by anele on 27/08/2025.
+ *
+ * @anele_ace
+ *
+ * =======================================================
+ */
+ 
 using MyApi.Data;
 using MyApi.Models;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // --- Services ---
+// DbContext for MySQL
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseMySql(
         builder.Configuration.GetConnectionString("DefaultConnection"),
@@ -12,14 +22,13 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     )
 );
 
-// OpenAPI / Swagger
+// Add MVC Controllers with Views
+builder.Services.AddControllersWithViews();
+
+// OpenAPI / Swagger (optional)
 builder.Services.AddOpenApi();
 
-// Blazor
-//builder.Services.AddHttpClient();
-builder.Services.AddRazorPages();
-builder.Services.AddServerSideBlazor();
-
+// Optional: HttpClient for API calls
 builder.Services.AddHttpClient("ServerAPI", client =>
 {
     client.BaseAddress = new Uri(builder.Configuration["BaseApiUrl"] ?? "http://localhost:5044/");
@@ -30,25 +39,34 @@ var app = builder.Build();
 // --- Middleware ---
 if (!app.Environment.IsDevelopment())
 {
-    app.UseExceptionHandler("/Error");
+    app.UseExceptionHandler("/Home/Error");
     app.UseHsts();
 }
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
+app.UseAuthorization();
 
-// --- Blazor Endpoints ---
-app.MapBlazorHub();
-app.MapFallbackToPage("/_Host");
+// --- Endpoints ---
+app.UseEndpoints(endpoints =>
+{
+    // Map API controllers
+    _ = endpoints.MapControllers();
 
-// --- API Endpoints ---
+    // Default MVC route: /Controller/Action/id
+    _ = endpoints.MapControllerRoute(
+        name: "default",
+        pattern: "{controller=Home}/{action=Index}/{id?}");
+});
+
+// OpenAPI in development
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
 }
 
-// Weather Forecast (demo)
+// Optional: demo WeatherForecast API
 var summaries = new[]
 {
     "Freezing", "Bracing", "Chilly", "Cool", "Mild",
@@ -68,27 +86,6 @@ app.MapGet("/api/weatherforecast", () =>
     return forecast;
 })
 .WithName("GetWeatherForecast");
-
-// Posts API
-app.MapGet("/api/post", async (AppDbContext db) =>
-{
-    var posts = await db.Posts.OrderByDescending(p => p.CreatedAt).ToListAsync();
-    return Results.Ok(posts);
-});
-
-app.MapGet("/api/post/{id}", async (int id, AppDbContext db) =>
-{
-    var post = await db.Posts.FindAsync(id);
-    return post is not null ? Results.Ok(post) : Results.NotFound();
-});
-
-app.MapPost("/api/post", async (Post post, AppDbContext db) =>
-{
-    post.CreatedAt = DateTime.UtcNow; // ensure timestamp
-    db.Posts.Add(post);
-    await db.SaveChangesAsync();
-    return Results.Created($"/api/post/{post.Id}", post);
-});
 
 app.Run();
 
