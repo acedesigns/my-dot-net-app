@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "JPAnYThRMTE=",
+  "dgSpecHash": "F3uSF6QZ8Cw=",
   "success": true,
   "projectFilePath": "/Users/anele/Desktop/DEV/dotnet/MyApi/MyApi.csproj",
   "expectedPackageFiles": [
@@ -33,6 +33,8 @@
     "/Users/anele/.nuget/packages/microsoft.extensions.primitives/9.0.8/microsoft.extensions.primitives.9.0.8.nupkg.sha512",
     "/Users/anele/.nuget/packages/microsoft.openapi/1.6.17/microsoft.openapi.1.6.17.nupkg.sha512",
     "/Users/anele/.nuget/packages/mono.texttemplating/3.0.0/mono.texttemplating.3.0.0.nupkg.sha512",
+    "/Users/anele/.nuget/packages/mysqlconnector/2.4.0/mysqlconnector.2.4.0.nupkg.sha512",
+    "/Users/anele/.nuget/packages/pomelo.entityframeworkcore.mysql/9.0.0/pomelo.entityframeworkcore.mysql.9.0.0.nupkg.sha512",
     "/Users/anele/.nuget/packages/system.codedom/6.0.0/system.codedom.6.0.0.nupkg.sha512",
     "/Users/anele/.nuget/packages/system.collections.immutable/7.0.0/system.collections.immutable.7.0.0.nupkg.sha512",
     "/Users/anele/.nuget/packages/system.composition/7.0.0/system.composition.7.0.0.nupkg.sha512",
