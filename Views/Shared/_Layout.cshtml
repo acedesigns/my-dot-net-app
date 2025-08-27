@@ -35,11 +35,15 @@
     </header>
 
     <div class="container mt-4">
-        @RenderBody()
+        <div class="flex-shrink-0">
+            @RenderBody()
+        </div>
     </div>
 
-    <footer class="bg-light text-center py-3 mt-4 border-top">
-        <p>&copy; @DateTime.Now.Year iiDENTIFii. All rights reserved. | 💻 on a MacBook Pro </p>
+    <footer class="bg-light text-center border-top footer mt-auto py-3 bg-body-tertiary">
+        <div class="container">
+            <p>&copy; @DateTime.Now.Year iiDENTIFii. All rights reserved. | 💻 on a MacBook Pro </p>
+        </div>
     </footer>
 
     <script src="~/js/bootstrap.bundle.min.js"></script>

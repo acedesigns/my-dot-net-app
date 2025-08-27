@@ -31,9 +31,15 @@
     <div class="col-md-6 mb-3">
         <div class="card h-100">
             <div class="card-body">
-                <h5 class="card-title">@post.Title</h5>
-                <p class="card-text">@post.Content</p>
-                <p class="card-text"><small class="text-muted">Likes: @(post.Likes ?? 0)</small></p>
+                <h5 class="card-title">
+                   <a asp-controller="Posts" asp-action="Details" asp-route-id="@post.Id">
+                        @post.Title
+                    </a>
+                </h5>
+                <p class="card-text">@post.Excerpt</p>
+                <p class="card-text">
+                    <small class="text-muted">Likes: @post.Likes.Count</small>
+                </p>
                 <form method="post" asp-action="Like" asp-route-id="@post.Id">
                     <button type="submit" class="btn btn-sm btn-outline-primary">Like</button>
                 </form>

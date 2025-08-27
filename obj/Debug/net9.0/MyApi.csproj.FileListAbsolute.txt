@@ -163,3 +163,4 @@
 /Users/anele/Desktop/DEV/dotnet/MyApi/obj/Debug/net9.0/compressed/msxcrddtz9-ex5vf7708v.gz
 /Users/anele/Desktop/DEV/dotnet/MyApi/obj/Debug/net9.0/compressed/8ijknwdh1t-b7iojwaux1.gz
 /Users/anele/Desktop/DEV/dotnet/MyApi/obj/Debug/net9.0/compressed/zji4qhkbmr-1j8snvso5d.gz
+/Users/anele/Desktop/DEV/dotnet/MyApi/bin/Debug/net9.0/BCrypt.Net-Next.dll

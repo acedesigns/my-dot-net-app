@@ -6,9 +6,8 @@
  *
  * =======================================================
  */
- 
+
 using MyApi.Data;
-using MyApi.Models;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -18,7 +17,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseMySql(
         builder.Configuration.GetConnectionString("DefaultConnection"),
-        new MySqlServerVersion(new Version(8, 0, 36)) // Update to your MySQL version
+        new MySqlServerVersion(new Version(8, 0, 36))
     )
 );
 
@@ -34,6 +33,17 @@ builder.Services.AddHttpClient("ServerAPI", client =>
     client.BaseAddress = new Uri(builder.Configuration["BaseApiUrl"] ?? "http://localhost:5044/");
 });
 
+// --- Authentication ---
+builder.Services.AddAuthentication("MyCookieAuth")
+    .AddCookie("MyCookieAuth", options =>
+    {
+        options.LoginPath = "/Auth/Login";
+        options.AccessDeniedPath = "/Auth/AccessDenied";
+        options.ExpireTimeSpan = TimeSpan.FromDays(1);
+    });
+
+builder.Services.AddAuthorization();
+
 var app = builder.Build();
 
 // --- Middleware ---
@@ -46,6 +56,9 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
+
+// Enable authentication and authorization
+app.UseAuthentication();
 app.UseAuthorization();
 
 // --- Endpoints ---

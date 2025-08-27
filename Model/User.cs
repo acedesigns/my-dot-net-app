@@ -8,40 +8,27 @@
  */
 
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MyApi.Models
 {
-
-    public class Post
+    public class User
     {
         public int Id { get; set; }
 
         [Required]
-        public required string Title { get; set; }
+        public required string Username { get; set; }
 
         [Required]
-        public required string Content { get; set; }
+        public required string Email { get; set; }
 
-        public int UserId { get; set; }
-        public User? User { get; set; }
-
+        [Required]
+        public required string PasswordHash { get; set; }
+        
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
         // Navigation properties
+        public ICollection<Post> Posts { get; set; } = new List<Post>();
         public ICollection<Comment> Comments { get; set; } = new List<Comment>();
         public ICollection<Like> Likes { get; set; } = new List<Like>();
-
-
-        [NotMapped]
-        public string Excerpt {
-            get {
-                if (string.IsNullOrEmpty(Content)) return "";
-                var words = Content.Split(' ');
-                return words.Length <= 20 ? Content : string.Join(" ", words.Take(20)) + "...";
-            }
-        }
-
     }
-    
 }

@@ -1,0 +1,36 @@
+@model MyApi.ViewModels.RegisterViewModel
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Register";
+}
+
+<h3>Register</h3>
+
+@Html.ValidationSummary(false, "", new { @class = "text-danger" })
+
+<div class="row justify-content-md-center">
+    <div class="col-md-6">
+    <form asp-action="Register" method="post">
+        @Html.AntiForgeryToken()
+        <div class="mb-3">
+            <label asp-for="Username" class="form-label"></label>
+            <input asp-for="Username" class="form-control"/>
+            <span asp-validation-for="Username"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Email" class="form-label"></label>
+            <input asp-for="Email" class="form-control"/>
+            <span asp-validation-for="Email"></span>
+        </div>
+
+        <div class=mb-4>
+            <label>Password</label>
+            <input type="password" name="password" class="form-control" />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+    </div>
+</div>
