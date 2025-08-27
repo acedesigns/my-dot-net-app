@@ -1,0 +1,49 @@
+@model IEnumerable<MyApi.Models.Post>
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Posts by " + ViewBag.AuthorName;
+}
+<h3>Posts by @ViewBag.AuthorName</h3>
+
+<div class="row">
+    @foreach (var post in Model)
+    {
+        <div class="col-md-6 mb-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <a asp-controller="Posts" asp-action="Details" asp-route-id="@post.Id">
+                            @post.Title
+                        </a>
+                    </h5>
+                    <p class="card-text">@post.Excerpt</p>
+                    <p class="card-text"><small class="text-muted">@post.CreatedAt.ToString("dd MMM yyyy")</small></p>
+                    <p class="card-text">Likes: @(post.Likes?.Count ?? 0)</p>
+                    <form method="post" asp-action="Like" asp-route-id="@post.Id">
+                        <button type="submit" class="btn btn-sm btn-outline-primary">Like</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+<nav aria-label="Page navigation">
+    <ul class="pagination justify-content-center">
+        <li class="page-item @(ViewBag.CurrentPage == 1 ? "disabled" : "")">
+            <a class="page-link" asp-action="ByAuthor" asp-route-id="@Model.FirstOrDefault()?.UserId" asp-route-page="@(ViewBag.CurrentPage - 1)">Previous</a>
+        </li>
+
+        @for (int i = 1; i <= ViewBag.TotalPages; i++)
+        {
+            <li class="page-item @(ViewBag.CurrentPage == i ? "active" : "")">
+                <a class="page-link" asp-action="ByAuthor" asp-route-id="@Model.FirstOrDefault()?.UserId" asp-route-page="@i">@i</a>
+            </li>
+        }
+
+        <li class="page-item @(ViewBag.CurrentPage == ViewBag.TotalPages ? "disabled" : "")">
+            <a class="page-link" asp-action="ByAuthor" asp-route-id="@Model.FirstOrDefault()?.UserId" asp-route-page="@(ViewBag.CurrentPage + 1)">Next</a>
+        </li>
+    </ul>
+</nav>

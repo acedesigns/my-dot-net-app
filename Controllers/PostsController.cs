@@ -25,6 +25,31 @@ namespace MyApi.Controllers
             _db = db;
         }
 
+        // GET: /Posts/ByAuthor/5
+        [Authorize(AuthenticationSchemes = "MyCookieAuth")]
+        public async Task<IActionResult> ByAuthor(int id, int page = 1)
+        {
+            const int pageSize = 4;
+
+            var user = await _db.Users.FirstOrDefaultAsync(u => u.Id == id);
+            if (user == null) return NotFound();
+
+            var totalPosts = await _db.Posts.CountAsync(p => p.UserId == id);
+
+            var posts = await _db.Posts
+                .Where(p => p.UserId == id)
+                .OrderByDescending(p => p.CreatedAt)
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
+
+            ViewBag.AuthorName = user.Username;
+            ViewBag.CurrentPage = page;
+            ViewBag.TotalPages = (int)Math.Ceiling(totalPosts / (double)pageSize);
+
+            return View(posts);
+        }
+
         //GET: Post Details
         [Authorize(AuthenticationSchemes = "MyCookieAuth")]
         public async Task<IActionResult> Details(int id)
