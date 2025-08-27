@@ -16,8 +16,14 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddOpenApi();
 
 // Blazor
+//builder.Services.AddHttpClient();
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
+
+builder.Services.AddHttpClient("ServerAPI", client =>
+{
+    client.BaseAddress = new Uri(builder.Configuration["BaseApiUrl"] ?? "http://localhost:5044/");
+});
 
 var app = builder.Build();
 

@@ -7,8 +7,21 @@
                 <use xlink:href="#bootstrap"></use>
             </svg> <span class="fs-4">🚀 iiDENTIFii</span> </a>
         <ul class="nav nav-pills">
-            <li class="nav-item"><a href="/" class="nav-link active" aria-current="page">Home</a></li>
-            <li class="nav-item"><a href="/posts" class="nav-link">Posts</a></li>
+            <li class="nav-item">
+                <NavLink class="nav-link" href="/" Match="NavLinkMatch.All">
+                    Home
+                </NavLink>
+            </li>
+            <li class="nav-item">
+                <NavLink class="nav-link" href="/posts">
+                    Posts
+                </NavLink>
+            </li>
+            <li class="nav-item">
+                <NavLink class="nav-link" href="/create-post">
+                    + Create Post
+                </NavLink>
+            </li>
         </ul>
     </header>
 </div>

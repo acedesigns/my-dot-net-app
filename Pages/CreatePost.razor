@@ -1,0 +1,53 @@
+@page "/create-post"
+@using MyApi.Models
+@inject NavigationManager Nav
+@inject IHttpClientFactory ClientFactory
+@using Microsoft.AspNetCore.Components.Forms
+
+<h3>Create a New Post</h3>
+
+<div class="form-container">
+    <EditForm Model="post" OnValidSubmit="HandleValidSubmit">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+
+        <div class="form-group">
+            <label for="title">Title</label>
+            <InputText id="title" class="form-control" @bind-Value="post.Title" />
+        </div>
+
+        <div class="form-group">
+            <label for="content">Content</label>
+            <InputTextArea id="content" class="form-control" @bind-Value="post.Content" rows="5" />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </EditForm>
+</div>
+
+@code {
+    private Post post = new Post();
+
+    // Use named HttpClient with BaseAddress
+    private HttpClient Http => ClientFactory.CreateClient("ServerAPI");
+
+
+    private async Task HandleValidSubmit()
+    {
+        try
+        {
+            var response = await Http.PostAsJsonAsync(Nav.BaseUri + "api/post", post);
+
+            if (response.IsSuccessStatusCode) {
+                // Redirect to posts page
+                Nav.NavigateTo("/posts");
+            } else {
+                Console.WriteLine("Failed to create post: " + response.ReasonPhrase);
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Error creating post: " + ex.Message);
+        }
+    }
+}
