@@ -12,10 +12,11 @@ using MyApi.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace MyApi.Controllers
 {
-    
+
     public class PostsController : Controller
     {
         private readonly AppDbContext _db;
@@ -25,8 +26,18 @@ namespace MyApi.Controllers
             _db = db;
         }
 
+        private IQueryable<Post> FilterPostsByDate(IQueryable<Post> query, DateTime? startDate, DateTime? endDate)
+        {
+            if (startDate.HasValue)
+                query = query.Where(p => p.CreatedAt >= startDate.Value);
+
+            if (endDate.HasValue)
+                query = query.Where(p => p.CreatedAt <= endDate.Value);
+
+            return query;
+        }
+
         // GET: /Posts/ByAuthor/5
-        [Authorize(AuthenticationSchemes = "MyCookieAuth")]
         public async Task<IActionResult> ByAuthor(int id, int page = 1)
         {
             const int pageSize = 4;
@@ -51,12 +62,12 @@ namespace MyApi.Controllers
         }
 
         //GET: Post Details
-        [Authorize(AuthenticationSchemes = "MyCookieAuth")]
         public async Task<IActionResult> Details(int id)
         {
             var post = await _db.Posts
                 .Include(p => p.User)
                 .Include(p => p.Comments)
+                    .ThenInclude(c => c.User)
                 .Include(p => p.Likes)
                 .FirstOrDefaultAsync(p => p.Id == id);
 
@@ -66,22 +77,44 @@ namespace MyApi.Controllers
         }
 
         // GET: /Posts
-        public async Task<IActionResult> Index(int page = 1)
+        public async Task<IActionResult> Index(int? authorId, DateTime? startDate, DateTime? endDate, int page = 1)
         {
-            int pageSize = 4;
-            var totalPosts = await _db.Posts.CountAsync();
+            const int pageSize = 4;
 
-            var posts = await _db.Posts
-                .Include(p => p.User)
-                .Include(p => p.Likes)
-                .OrderByDescending(p => p.CreatedAt)
+            var query = _db.Posts.Include(p => p.User).Include(p => p.Likes).AsQueryable();
+
+            if (authorId.HasValue)
+                query = query.Where(p => p.UserId == authorId.Value);
+
+            if (startDate.HasValue)
+                query = query.Where(p => p.CreatedAt >= startDate.Value);
+
+            if (endDate.HasValue)
+                query = query.Where(p => p.CreatedAt <= endDate.Value);
+
+            var totalPosts = await query.CountAsync();
+            var posts = await query.OrderByDescending(p => p.CreatedAt)
                 .Skip((page - 1) * pageSize)
                 .Take(pageSize)
                 .ToListAsync();
 
+            var authors = await _db.Users.OrderBy(u => u.Username).ToListAsync();
+
+            var vm = new PostFilterViewModel
+            {
+                SelectedAuthorId = authorId,
+                StartDate = startDate,
+                EndDate = endDate,
+                Posts = posts,
+                AuthorsList = authors.Select(a =>
+                    new SelectListItem { Value = a.Id.ToString(), Text = a.Username }
+                ).ToList()
+            };
+
             ViewBag.CurrentPage = page;
             ViewBag.TotalPages = (int)Math.Ceiling(totalPosts / (double)pageSize);
-            return View(posts);
+
+            return View(vm);
         }
 
         // GET: /Posts/Create
@@ -97,10 +130,14 @@ namespace MyApi.Controllers
             if (!ModelState.IsValid)
                 return View(post);
 
-            post.CreatedAt = DateTime.UtcNow;
+            try {
+                post.UserId = GetCurrentUserId();
+            } catch {
+                ModelState.AddModelError("", "Unable to determine logged-in user.");
+                return View(post);
+            }
 
-            // TODO: replace with your logged-in user ID
-            post.UserId = GetCurrentUserId();
+            post.CreatedAt = DateTime.UtcNow;
 
             _db.Posts.Add(post);
             await _db.SaveChangesAsync();
@@ -108,8 +145,9 @@ namespace MyApi.Controllers
         }
 
         // POST: /Posts/Like/5
-        [Authorize(AuthenticationSchemes = "MyCookieAuth")]
         [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Authorize(AuthenticationSchemes = "MyCookieAuth")]
         public async Task<IActionResult> Like(int id)
         {
             var post = await _db.Posts
@@ -118,41 +156,74 @@ namespace MyApi.Controllers
 
             if (post == null) return NotFound();
 
-            int userId = GetCurrentUserId(); // get logged-in user ID
+            int userId = GetCurrentUserId();
 
-            // Prevent liking your own post
             if (post.UserId == userId)
             {
                 TempData["Error"] = "You cannot like your own post.";
                 return RedirectToAction(nameof(Index));
             }
 
-            // Prevent liking more than once
-            bool alreadyLiked = post.Likes.Any(l => l.UserId == userId);
-            if (alreadyLiked)
+            if (post.Likes.Any(l => l.UserId == userId))
             {
                 TempData["Error"] = "You have already liked this post.";
                 return RedirectToAction(nameof(Index));
             }
 
-            // Add new like
-            var like = new Like
-            {
-                PostId = post.Id,
-                UserId = userId
-            };
-
-            _db.Likes.Add(like);
+            _db.Likes.Add(new Like { PostId = post.Id, UserId = userId });
             await _db.SaveChangesAsync();
 
             return RedirectToAction(nameof(Index));
         }
 
-        // TODO: Implement your method for retrieving the logged-in user
+        // Get Logged In User
         private int GetCurrentUserId()
         {
-            // Example placeholder - replace with real authentication
-            return 1;
+            var userIdClaim = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
+
+            if (string.IsNullOrEmpty(userIdClaim) || !int.TryParse(userIdClaim, out var userId))
+            {
+                throw new InvalidOperationException("Unable to determine the current logged-in user.");
+            }
+
+            return userId;
+        }
+        
+
+        [HttpPost]
+        [Authorize(AuthenticationSchemes = "MyCookieAuth")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> AddComment(int postId, string content)
+        {
+            if (string.IsNullOrWhiteSpace(content))
+            {
+                TempData["Error"] = "Comment cannot be empty.";
+                return RedirectToAction("Details", new { id = postId });
+            }
+
+            int userId;
+            try
+            {
+                userId = GetCurrentUserId();
+            }
+            catch
+            {
+                TempData["Error"] = "User not found.";
+                return RedirectToAction("Details", new { id = postId });
+            }
+
+            var comment = new Comment
+            {
+                Content = content,
+                CreatedAt = DateTime.UtcNow,
+                PostId = postId,
+                UserId = userId
+            };
+
+            _db.Comments.Add(comment);
+            await _db.SaveChangesAsync();
+
+            return RedirectToAction("Details", new { id = postId });
         }
     }
 }

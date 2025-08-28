@@ -28,6 +28,16 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/Posts/Create">Create Post</a>
                         </li>
+                        @if (User.Identity != null && User.Identity.IsAuthenticated)
+                        {
+                        <li class="nav-item">
+                            <form method="post" asp-controller="Account" asp-action="Logout" class="d-inline">
+                                <button type="submit" class="btn btn-sm btn-outline-dark">
+                                    Logout
+                                </button>
+                            </form>
+                        </li>
+                        }
                     </ul>
                 </div>
             </div>

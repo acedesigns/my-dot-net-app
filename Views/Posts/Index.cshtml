@@ -1,81 +1,137 @@
+@model PostFilterViewModel
+
 @{
     Layout = "_Layout";
     ViewData["Title"] = "Posts";
 }
 
-@model IEnumerable<MyApi.Models.Post>
-
 <h1>All Posts</h1>
 
-@if (!Model.Any(p => !string.IsNullOrWhiteSpace(p.Title) || !string.IsNullOrWhiteSpace(p.Content)))
+@if (!Model.Posts.Any())
 {
     <div class="row justify-content-md-center">
         <div class="col-md-auto">
             <div class="card" style="width: 18rem;">
-                <svg aria-label="Placeholder: Image cap" class="bd-placeholder-img card-img-top" height="180" preserveAspectRatio="xMidYMid slice" role="img" width="100%" xmlns="http://www.w3.org/2000/svg">
-                    <title>Placeholder</title>
-                    <rect width="100%" height="100%" fill="#868e96"></rect>
-                    <text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text>
-                </svg>
                 <div class="card-body">
                     <h5 class="card-title">No posts available</h5>
                 </div>
-                </div>
-        </div>
-    </div>
-}
-
-<div class="row">
-@foreach (var post in Model)
-{
-    <div class="col-md-6 mb-3">
-        <div class="card h-100">
-            <div class="card-body">
-                <h5 class="card-title">
-                   <a asp-controller="Posts" asp-action="Details" asp-route-id="@post.Id">
-                        @post.Title
-                    </a>
-                </h5>
-                <p class="card-text">@post.Excerpt</p>
-                <p class="card-text">
-                    <small class="text-muted">Likes: @post.Likes.Count</small>
-                </p>
-                <form method="post" asp-action="Like" asp-route-id="@post.Id">
-                    <button type="submit" class="btn btn-sm btn-outline-primary">Like</button>
-                </form>
             </div>
         </div>
     </div>
 }
-</div>
 
-<div class="row justify-content-md-center">
-    <div class="col-md-auto">
-        <div class="mt-3">
-            <nav aria-label="Page navigation example">
-                <ul class="pagination">
 
-                    <!-- Previous Button -->
-                    <li class="page-item @(ViewBag.CurrentPage == 1 ? "disabled" : "")">
-                        <a class="page-link" asp-action="Index" asp-route-page="@(ViewBag.CurrentPage - 1)">Previous</a>
-                    </li>
+<!-- Filter Form -->
+<form method="get" class="mb-3 row g-2">
+    <div class="col-md-4">
+        <label for="authorId" class="form-label">View by Author</label>
+        <<select asp-for="SelectedAuthorId" asp-items="Model.AuthorsList" class="form-select">
+            <option value="">All</option>
+        </select>
+    </div>
 
-                    <!-- Page Numbers -->
-                    @for (int i = 1; i <= ViewBag.TotalPages; i++)
-                    {
-                        <li class="page-item @(i == ViewBag.CurrentPage ? "active" : "")">
-                            <a class="page-link" asp-action="Index" asp-route-page="@i">@i</a>
-                        </li>
-                    }
+    <div class="col-md-4">
+        <label for="authorId" class="form-label">View by Date</label>
+        
+        <div class="row">
+            <div class="col-auto">
+                <label for="startDate" class="form-label">Start Date</label>
+                <input type="date" name="startDate" id="startDate" class="form-control" value="@ViewBag.StartDate" />
+            </div>
 
-                    <!-- Next Button -->
-                    <li class="page-item @(ViewBag.CurrentPage == ViewBag.TotalPages ? "disabled" : "")">
-                        <a class="page-link" asp-action="Index" asp-route-page="@(ViewBag.CurrentPage + 1)">Next</a>
-                    </li>
+            <div class="col-auto">
+                <label for="endDate" class="form-label">End Date</label>
+                <input type="date" name="endDate" id="endDate" class="form-control" value="@ViewBag.EndDate" />
+            </div>
 
-                </ul>
-            </nav>
+            <div class="d-grid gap-2 mt-2">
+            <button type="submit" class="btn btn-outline-secondary btn-sm">Filter</button>
+            </div>
+            
         </div>
     </div>
+    <div class="col-md-4">
+        <label for="authorId" class="form-label">View by Tags</label>
+    </div>
+</form>
+
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger">@TempData["Error"]</div>
+}
+
+<!-- Posts List -->
+<div class="row">
+    @foreach (var post in Model.Posts)
+    {
+        <div class="col-md-6 mb-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <a asp-controller="Posts" asp-action="Details" asp-route-id="@post.Id">
+                            @post.Title
+                        </a>
+                    </h5>
+                    <p class="card-text">@post.Excerpt</p>
+                    <p class="card-text">
+                        <small class="text-muted">Likes: (👍🏽)  @post.Likes.Count</small>
+                    </p>
+                    <form method="post" asp-controller="Posts" asp-action="Like" asp-route-id="@post.Id">
+                        @Html.AntiForgeryToken()
+                        <button type="submit" class="btn btn-sm btn-outline-primary">Like</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    }
 </div>
 
+<!-- Pagination -->
+<div class="row justify-content-md-center">
+    <div class="col-md-auto">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+
+                <!-- Previous Button -->
+                <li class="page-item @(ViewBag.CurrentPage == 1 ? "disabled" : "")">
+                    <a class="page-link" 
+                       asp-action="Index" 
+                       asp-route-page="@(ViewBag.CurrentPage - 1)" 
+                       asp-route-authorId="@ViewBag.AuthorId" 
+                       asp-route-startDate="@ViewBag.StartDate" 
+                       asp-route-endDate="@ViewBag.EndDate">
+                        Previous
+                    </a>
+                </li>
+
+                <!-- Page Numbers -->
+                @for (int i = 1; i <= ViewBag.TotalPages; i++)
+                {
+                    <li class="page-item @(i == ViewBag.CurrentPage ? "active" : "")">
+                        <a class="page-link" 
+                           asp-action="Index" 
+                           asp-route-page="@i" 
+                           asp-route-authorId="@ViewBag.AuthorId" 
+                           asp-route-startDate="@ViewBag.StartDate" 
+                           asp-route-endDate="@ViewBag.EndDate">
+                            @i
+                        </a>
+                    </li>
+                }
+
+                <!-- Next Button -->
+                <li class="page-item @(ViewBag.CurrentPage == ViewBag.TotalPages ? "disabled" : "")">
+                    <a class="page-link" 
+                       asp-action="Index" 
+                       asp-route-page="@(ViewBag.CurrentPage + 1)" 
+                       asp-route-authorId="@ViewBag.AuthorId" 
+                       asp-route-startDate="@ViewBag.StartDate" 
+                       asp-route-endDate="@ViewBag.EndDate">
+                        Next
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+    </div>
+</div>
