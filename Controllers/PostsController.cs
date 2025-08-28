@@ -77,44 +77,39 @@ namespace MyApi.Controllers
         }
 
         // GET: /Posts
-        public async Task<IActionResult> Index(int? authorId, DateTime? startDate, DateTime? endDate, int page = 1)
+        public async Task<IActionResult> Index(PostFilterViewModel filter, int page = 1)
         {
             const int pageSize = 4;
 
             var query = _db.Posts.Include(p => p.User).Include(p => p.Likes).AsQueryable();
 
-            if (authorId.HasValue)
-                query = query.Where(p => p.UserId == authorId.Value);
+            if (filter.SelectedAuthorId.HasValue)
+                query = query.Where(p => p.UserId == filter.SelectedAuthorId.Value);
 
-            if (startDate.HasValue)
-                query = query.Where(p => p.CreatedAt >= startDate.Value);
 
-            if (endDate.HasValue)
-                query = query.Where(p => p.CreatedAt <= endDate.Value);
+            if (filter.StartDate.HasValue)
+                query = query.Where(p => p.CreatedAt >= filter.StartDate.Value);
+
+            if (filter.EndDate.HasValue)
+                query = query.Where(p => p.CreatedAt <= filter.EndDate.Value);
 
             var totalPosts = await query.CountAsync();
-            var posts = await query.OrderByDescending(p => p.CreatedAt)
+
+            filter.Posts = await query.OrderByDescending(p => p.CreatedAt)
                 .Skip((page - 1) * pageSize)
                 .Take(pageSize)
                 .ToListAsync();
 
             var authors = await _db.Users.OrderBy(u => u.Username).ToListAsync();
 
-            var vm = new PostFilterViewModel
-            {
-                SelectedAuthorId = authorId,
-                StartDate = startDate,
-                EndDate = endDate,
-                Posts = posts,
-                AuthorsList = authors.Select(a =>
-                    new SelectListItem { Value = a.Id.ToString(), Text = a.Username }
-                ).ToList()
-            };
+            filter.AuthorsList = authors.Select(a =>
+                new SelectListItem { Value = a.Id.ToString(), Text = a.Username }
+            ).ToList();
 
             ViewBag.CurrentPage = page;
             ViewBag.TotalPages = (int)Math.Ceiling(totalPosts / (double)pageSize);
 
-            return View(vm);
+            return View(filter);
         }
 
         // GET: /Posts/Create

@@ -24,8 +24,8 @@
 <!-- Filter Form -->
 <form method="get" class="mb-3 row g-2">
     <div class="col-md-4">
-        <label for="authorId" class="form-label">View by Author</label>
-        <<select asp-for="SelectedAuthorId" asp-items="Model.AuthorsList" class="form-select">
+        <label for="SelectedAuthorId" class="form-label">View by Author</label>
+        <select asp-for="SelectedAuthorId" asp-items="Model.AuthorsList" class="form-select">
             <option value="">All</option>
         </select>
     </div>
@@ -50,6 +50,7 @@
             
         </div>
     </div>
+    
     <div class="col-md-4">
         <label for="authorId" class="form-label">View by Tags</label>
     </div>
